@@ -1,0 +1,158 @@
+# =============================================================================
+# NanoOWL-Stuff .gitignore
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Model weights & TensorRT engines
+# -----------------------------------------------------------------------------
+*.engine
+*.trt
+*.plan
+*.onnx
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.pb
+*.h5
+*.pkl
+*.pickle
+
+# -----------------------------------------------------------------------------
+# Images & videos
+# nanoowl/assets/ is NOT listed here — those are original repo demo images.
+# Everything under data/ and outputs/ is ignored since those are generated.
+# -----------------------------------------------------------------------------
+
+# Output images (always ignore)
+nanoowl/data/*.jpg
+nanoowl/data/*.jpeg
+nanoowl/data/*.png
+nanoowl/data/*.gif
+nanoowl/data/*.bmp
+nanoowl/data/*.webp
+nanoowl/outputs/*.jpg
+nanoowl/outputs/*.jpeg
+nanoowl/outputs/*.png
+nanoowl/outputs/*.gif
+nanoowl/outputs/*.bmp
+
+# Video files (anywhere)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wmv
+*.m4v
+*.gif
+
+# -----------------------------------------------------------------------------
+# Python cache & compiled files
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# -----------------------------------------------------------------------------
+# Build artifacts
+# -----------------------------------------------------------------------------
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+MANIFEST
+*.so
+*.dylib
+*.dll
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# -----------------------------------------------------------------------------
+# Jupyter notebooks (checkpoints & outputs)
+# -----------------------------------------------------------------------------
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# -----------------------------------------------------------------------------
+# Data directories (large blobs)
+# -----------------------------------------------------------------------------
+nanoowl/data/
+nanoowl/outputs/
+
+# If you want to track the data/ folder structure but not its contents:
+# nanoowl/data/*
+# !nanoowl/data/.gitkeep
+
+# -----------------------------------------------------------------------------
+# HuggingFace / torch cache (if accidentally inside repo)
+# -----------------------------------------------------------------------------
+.cache/
+*.lock
+huggingface/
+hub/
+
+# -----------------------------------------------------------------------------
+# Virtual envs & conda (if accidentally created inside repo)
+# -----------------------------------------------------------------------------
+.env
+.venv
+env/
+venv/
+ENV/
+*.conda
+*.mamba
+
+# -----------------------------------------------------------------------------
+# OS junk
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# -----------------------------------------------------------------------------
+# Editor / IDE
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# -----------------------------------------------------------------------------
+# Logs & profiling
+# -----------------------------------------------------------------------------
+*.log
+*.out
+*.err
+logs/
+runs/
+wandb/
+tensorboard/
+
+# -----------------------------------------------------------------------------
+# Temporary files
+# -----------------------------------------------------------------------------
+tmp/
+temp/
+.tmp/
+*.tmp
+*.bak
+*.orig
